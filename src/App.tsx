@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className="absolute bottom-10 right-10">
         <div className="mb-5">
-          <BetSlider minValue={10} maxValue={100} value={10} />
+          <BetSlider minValue={10} maxValue={100} />
         </div>
         <div className="flex gap-5 justify-around">
           <ActionButton action={"fold"} />
