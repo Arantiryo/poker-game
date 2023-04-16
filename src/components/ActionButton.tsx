@@ -6,7 +6,7 @@ type ActionButtonProps = {
 
 const ActionButton: FC<ActionButtonProps> = ({ action }) => {
   return (
-    <button className="bg-gray-500 hover:bg-gray-700 text-white min-w-[100px] font-bold py-2 px-4 rounded-xl capitalize">
+    <button className="bg-gray-500 hover:bg-gray-700 duration-100 text-white min-w-[100px] font-bold py-2 px-4 rounded-xl capitalize">
       {action}
     </button>
   );

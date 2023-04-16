@@ -1,5 +1,6 @@
 import { FC } from "react";
 import defaultAvatar from "../assets/player-avatars/avatar.svg";
+import FaceDownCard from "./FaceDownCard";
 
 type PlayerProps = {
   name: string;
@@ -23,6 +24,14 @@ const Player: FC<PlayerProps> = ({ name, balance }) => {
           <p className="bg-gray-800 p-1 text-white text-sm border-2 rounded whitespace-nowrap z-10 mb-1">
             {name} (${formatBalance(balance)})
           </p>
+        </div>
+        <div className="absolute top-0 left-2">
+          <div className="absolute w-12 top-0 left-0">
+            <FaceDownCard />
+          </div>
+          <div className="absolute w-12 top-3 left-3">
+            <FaceDownCard />
+          </div>
         </div>
       </div>
     </>
