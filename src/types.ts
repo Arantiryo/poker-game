@@ -2,8 +2,9 @@ type Suit = "s" | "d" | "h" | "c";
 
 export interface PlayingCard {
   value: string;
+  rank: string;
   suit: Suit;
-  path: string;
+  image: string;
 }
 
 export type Deck = PlayingCard[];

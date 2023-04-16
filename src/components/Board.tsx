@@ -1,21 +1,22 @@
 import { FC } from "react";
-import { PlayingCard } from "../types";
 import Card from "./Card";
+import deck from "../utils/deck";
+import FaceDownCard from "./FaceDownCard";
 
 const Board: FC = () => {
-  const testCard: PlayingCard = {
-    value: "9",
-    suit: "s",
-    path: "./src/",
-  };
+  const ac = deck.get("Ac");
+  const ad = deck.get("Ad");
+  const ah = deck.get("Ah");
+
+  if (!ac || !ad || !ah) return <div>Error</div>;
 
   return (
     <div className="h-1/3 flex items-center justify-center gap-5 overflow-hidden">
-      <Card card={testCard} />
-      <Card card={testCard} />
-      <Card card={testCard} />
-      <Card card={testCard} />
-      <Card card={testCard} />
+      <Card card={ac} />
+      <Card card={ad} />
+      <Card card={ah} />
+      <FaceDownCard />
+      <FaceDownCard isHidden={true} />
     </div>
   );
 };
